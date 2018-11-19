@@ -4,7 +4,7 @@ import java.util.*;
 import kata5P2.model.*;
 import kata5P2.view.HistogramDisplay;
 import kata5P2.view.MailHistogramBuilder;
-import kata5P2.view.MailListReader;
+import kata5P2.view.MailListReaderBD;
 
 public class Controller {
 	
@@ -22,7 +22,7 @@ public class Controller {
     }
      
      private static void Input(){
-        mailList = MailListReader.read("src/File/emailsfile.txt");
+        mailList = MailListReaderBD.read("jdbc:sqlite:KATA5.db");
     }
      
      private static void Process(){
